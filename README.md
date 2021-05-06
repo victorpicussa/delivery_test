@@ -2,24 +2,24 @@
 
 Um simples parser de JSON feito em Ruby on Rails.
 
-# INICIALIZAÇÃO
+## INICIALIZAÇÃO
 
 O projeto possui a dependência do Ruby versão 2.7.0 e do SQLite3. Como será possível armazenar
 um JSON padronizado é preciso criar o banco de dados, para isso bastar utilizar o comando **rake db:migrate**.
 Para verificar a criação foi um sucesso basta usar **sqlite3 db/development.rb** para acessar o banco de dados.
 Com isso, executando o comando **rails s** o servidor estará ativo.
 
-# UTILIZAÇÃO
+## UTILIZAÇÃO
 
 O projeto possui duas rotas: */parse* que recebe um certo JSON e retorna os dados no padrão definido
 em *pattern.json*; */create* que recebe um JSON e verifica sua validade antes de inserir no banco de dados.
 
-# TESTES
+## TESTES
 
 Testes simples foram aplicados nas rotas de */parse* e */create* com RSpec 5.0. A execução dos testes é feita com
 o comando **bundle exec rspec spec/requests/parser_spec.rb** e **bundle exec rspec spec/requests/delivery_spec.rb**.
 
-# EXEMPLO
+## EXEMPLO
 
 Fazendo uma requisição de GET para a rota *127.0.0.1:3000/parse* com o seguinte JSON:
 ```json
