@@ -1,0 +1,42 @@
+{
+    "externalCode": "id",
+    "storeId": "store_id",
+    "subTotal": "total_amount",
+    "deliveryFee": "total_shipping",
+    "total_shipping": "total_shipping",
+    "total": "total_amount_with_shipping",
+    "country": "shipping.receiver_address.country.id",
+    "state": "shipping.receiver_address.state.name",
+    "city": "shipping.receiver_address.city.name",
+    "district": "shipping.receiver_address.neighborhood.name",
+    "street": "shipping.receiver_address.street_name",
+    "complement": "shipping.receiver_address.comment",
+    "latitude": "shipping.receiver_address.latitude",
+    "longitude":  "shipping.receiver_address.longitude",
+    "dtOrderCreate": "date_created",
+    "postalCode": "shipping.receiver_address.zip_code",
+    "number": "0",
+    "customer": {
+        "externalCode": "buyer.id",
+        "name": "buyer.nickname",
+        "email": "buyer.email",
+        "contact": "shipping.receiver_address.receiver_phone"
+    }
+    ,
+    "items": ["order_items", [
+        {
+            "externalCode": "item.id",
+            "name": "item.title",
+            "price": "unit_price",
+            "quantity": "quantity",
+            "total": "full_unit_price",
+            "subItems": []
+        }
+    ]],
+    "payments": ["payments", [
+        {
+            "type": "payment_type",
+            "value": "installment_amount"
+        }
+    ]]
+}
